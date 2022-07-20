@@ -1,0 +1,60 @@
+@import "reset.css";
+
+@import "variables.css";
+
+/* Components */
+@import "components/header.css";
+
+@import "components/footer.css";
+
+@import "components/chat.css";
+
+/* Screens */
+@import "screens/main.css";
+
+@import "screens/mentor_register.css";
+
+@import "screens/mentor_register_list.css";
+
+@import "screens/board.css";
+
+@import "screens/userlist.css";
+
+@import "screens/mentor_view.css";
+
+@import "screens/mentor_list.css";
+
+@import "screens/videoview.css";
+
+@import "screens/order.css";
+
+@import "screens/video_edit.css";
+
+@import "screens/video_upload.css";
+
+@import "screens/mainbasket.css";
+
+@import "screens/join.css";
+
+@import "screens/MyVideo.css";
+
+@import "screens/mente_list.css";
+
+@import "screens/mentee_videolist.css";
+
+@import "screens/popup.css";
+
+@import "screens/Login_popup.css";
+
+
+body {
+	background-color: #fafafa;
+	color: #2e363e;
+	scroll-behavior: smooth;
+    font-family: Spoqa Han Sans Neo,sans-serif;
+	overflow-x: hidden;
+}
+
+.main-screen {
+	padding: 0px var(- -horizontal-space);
+}

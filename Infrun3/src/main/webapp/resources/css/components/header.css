@@ -1,0 +1,141 @@
+.top_header {
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fafafa;
+	border-bottom: 1px solid #f1f3f5;
+}
+
+.bottom_header_right_menu{
+	display:flex;
+	align-items: center;
+}
+
+.left_menu{
+	text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 16px;
+	
+}
+
+.bottom_header button {
+	background: none;
+	border: none;
+}
+
+.bottom_header_left_menu{
+	display: flex;
+    align-items: center;
+}
+
+
+.mainheader_mentor_register {
+	border: none;
+	background: #fafafa;
+	color: #1dc078;
+	font-weight: 800;
+}
+
+.top_header_main {
+	max-width: 1300px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.top_header_left_menu i {
+	color: #1dc078;
+	margin-left: 2px;
+}
+
+.bottom_header {
+	display: flex;
+	background-color: #fafafa;
+	height: 64px;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	box-shadow: 0px 0.5px 1px 0px;
+}
+
+note-num {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 3;
+	height: 20px;
+	width: 20px;
+	line-height: 20px;
+	text-align: center;
+	background-color: red;
+	border-radius: 15px;
+	display: inline-block;
+}
+
+#notification {
+	background-image: url('../images/notification.svg');
+	position: relative;
+}
+
+.bottom_header_main {
+	display: flex;
+	justify-content: space-between;
+	min-width: 1400px;
+	align-items: center;
+}
+
+.title {
+	font-size:30px;
+	color: #1dc078;
+	padding-bottom: 8px;
+	margin-right:10px;
+}
+
+.bottom_header_right_menu button {
+	align-items: center;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.chat_count_bedge{
+	position:absolute;
+	    background-color: tomato;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top:0;
+    margin-left:15px;
+    margin-top:10px;
+}
+
+.shopping_cart ,#chat_div, .my_page, .bottom_header_right_menu i{
+	padding:8px 12px;
+	color:#2E363E;
+}
+
+.bottom_header_right_menu i{
+	font-size:18px;
+}
+
+.logout{
+	font-size:16px;
+}
+
+.login, .join{
+	font-size:16px;
+}
+
+.login{
+	margin-right: 8px;
+}

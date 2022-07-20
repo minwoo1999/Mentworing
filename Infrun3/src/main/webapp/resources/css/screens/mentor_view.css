@@ -1,0 +1,210 @@
+.mentorview_body {
+	height: 300vh;
+	position: relative;
+}
+
+.mentor_view_content_nav {
+	display: flex;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	width: 100%;
+	justify-content: center;
+}
+
+.mentor_view_content_header_container {
+	display: flex;
+	width: 80%;
+}
+
+.mentor_view_content_header {
+	display: flex;
+	flex-direction: column;
+}
+
+.mentor_view_content_header a {
+	color: #1e1e1e;
+	font-size: 24px;
+}
+
+.fa-solid fa-computer {
+	margin-left: 10px;
+}
+
+.mentor_view_content_sub_title {
+	margin-top: 30px;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.profile_container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	padding: 40px 0px;
+	justify-content: center;
+	margin-top: 80px;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.profile_img_box {
+	margin-right: 100px;
+	position: relative;
+}
+
+.btn_profile_settings {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px;
+}
+
+.profile-image img {
+	width: 230px;
+	height: 307px;
+	border-radius: 20px;
+}
+
+.profile_name, .btn_profile_settings i, .class_intro {
+	font-size: 28px;
+	font-weight: 800;
+}
+
+.profile_information_box {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 900px;
+	justify-content: flex-start;
+	padding-top: 10px;
+}
+
+.profile_chat {
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+	border: 1px solid #1dc078;
+	margin-top: 5px;
+}
+
+.profile_user_intro {
+	font-size: 15px;
+}
+
+.profile_user_intro_box {
+	max-width: 500px;
+	height: auto;
+}
+
+.profile_title {
+	margin-bottom: 50px;
+}
+
+.class_intro {
+	padding-left: 15px;
+	margin-bottom: 30px;
+}
+
+.profile_class_intro {
+	padding-left: 15px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	font-size: 18px;
+}
+
+.profile_rcmcomment_intro {
+	font-size: 18px;
+	padding-left: 15px;
+	margin-top: 20px;
+}
+
+.mentorview_container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.mentorview_wraper {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.mentorview_content_img {
+	width: 400px;
+	height: 300px;
+	position: relative;
+}
+
+.mentorview_content {
+	position: relative;
+	width: 33%;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+.mentorview_content input {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	margin-left: 32px;
+	margin-top: 25px;
+}
+
+.mentorview_content input[type=checkbox] {
+	zoom: 1.8;
+}
+
+.mentorview_content_information {
+	width: 330px;
+	height: 100px;
+	background: #ffffff;
+	position: absolute;
+	margin-left: 2px;
+	bottom: 5px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 20px 25px -5px rgb(0 0 0/ 10%), 0 8px 10px -6px
+		rgb(0 0 0/ 10%);
+}
+
+.mentorview_content_name {
+	font-size: 20px;
+}
+
+.mentorview_content_pay {
+	font-size: 16px;
+	color: #1dc078;
+	margin-top: 8px;
+}
+
+.basketbutton {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 300px;
+}
+
+.basketbutton input {
+	width: 250px;
+	height: 50px;
+	background: #1dc078;
+	border: none;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+
+.basketbutton i {
+	position: absolute;
+	font-size: 20px;
+	color: #fff;
+}

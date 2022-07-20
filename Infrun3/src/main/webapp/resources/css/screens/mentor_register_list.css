@@ -1,0 +1,69 @@
+.mentor_join_list_title_container {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+}
+.mentor_register_list{
+	height: 200vh;
+	position: relative;
+}
+
+.mentor_join_list_title_wraper {
+	width: 580px;
+	height: 54px;
+	border-radius: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(29, 192, 120, .12);
+	border: 1px solid rgba(29, 192, 120, .24);
+}
+
+.mentor_join_list_title_wraper span {
+	color: #1dc078;
+	font-weight: bold;
+}
+
+.mentor_join_list_main_container {
+	height: 500px;
+	background-color: #fafafa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 90px;
+}
+
+.mentor_join_list_main_wraper {
+	display: flex;
+	border-radius: 20px;
+	padding: 50px;
+	box-shadow: 2px 2px 2px 2px;
+}
+
+.metor_list_table {
+	text-align: center;
+}
+
+.metor_list_table td {
+	vertical-align: middle;
+}
+
+.metor_list_table th {
+	vertical-align: middle;
+	padding: 40px;
+}
+
+.metor_list_table tr {
+	padding: 20px 40px;
+}
+
+.deco_line {
+	border-top: 2px solid #1dc078;
+	padding: 10px 40px;
+}
+
+.table_title {
+	font-weight: 900;
+	font-size: 18px;
+	color: #1dc078;
+}
