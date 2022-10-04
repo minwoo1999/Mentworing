@@ -9,8 +9,6 @@
 
 ##강의 이어보기 및 TOP 3강의
 ![image](https://user-images.githubusercontent.com/79193811/193780959-bd500ee1-b99e-4615-b1bd-a98a8486e19e.png)
-##멘토상세페이지 결제 후 채팅하는장면
-![chattingmentorview](https://user-images.githubusercontent.com/79193811/180153098-5f47486a-b45a-4273-b63f-a5ffdf7da802.PNG)
 
 ##장바구니 및 쿠폰
 
