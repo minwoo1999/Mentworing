@@ -62,7 +62,10 @@
 ![image](https://user-images.githubusercontent.com/79193811/193781907-f1c4e05a-bb96-4b56-aa87-7b963cf00398.png)
 
 
+##시연영상
 
+<video src="https://infruntest.s3.ap-northeast-2.amazonaws.com/infrun.mp4" controls="">
+					</video>
 
 
 
