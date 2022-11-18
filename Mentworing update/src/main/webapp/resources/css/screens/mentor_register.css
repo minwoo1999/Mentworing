@@ -1,0 +1,149 @@
+
+
+.mentor_register_title_container {
+   display: flex;
+   justify-content: center;
+   margin-top: 200px;
+   width:100%;
+}
+
+
+#Mentor{
+	margin-bottom:500px;
+}
+.mentor_register_title_wraper {
+   width:80%;
+   height: auto;
+   margin-bottom: 120px;
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+}
+.mentor_register_title_title{
+	font-size:48px;
+}
+
+.mentor_register_title_subtitle{
+	margin-top:20px;
+	font-size:20px;
+	color: #6B7280;
+}
+
+
+.mentor_join_main_container {
+   height: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 150px;
+}
+
+.mentor_join_main_wraper {
+   display: flex;
+   border: solid #1dc078;
+   border-radius: 20px;
+   padding: 100px 150px;
+   padding-bottom: 100px;
+}
+
+.metor_join_main_imgbox {
+   width: 200px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.metor_join_main_imgbox img {
+   border: 2px solid;
+   width: 300px;
+   height: 400px;
+   position: relative;
+}
+
+.information_box {
+   display: flex;
+   flex-direction: column;
+   margin-left: 200px;
+   justify-content: center;
+}
+
+.information_input_box{
+   width:550px;
+   height: auto;
+   margin-bottom: 30px;
+   
+}
+
+.duty{
+   width:528px;
+   height: 30px;
+   border: 1px solid rgba(0,0,0,0.09);
+   box-shadow: 0 1px 4px rgb(0 0 0 / 3%);
+   text-align:center;
+}
+.information_input_title i{
+   margin-left:5px;
+   color:#1dc078;
+}
+
+.information_input_box input {
+   width:520px;
+   height: 44px;
+   border: 1px solid rgba(0,0,0,0.09);
+   box-shadow: 0 1px 4px rgb(0 0 0 / 3%);
+   padding-left:5px;
+}
+.information_input_title{
+   margin-bottom:5px;
+}
+
+.img_registration_btn {
+   position: absolute;
+   padding: 7px;
+   border: none;
+   margin-top: 480px;
+   border-radius: 5px;
+   border: 1px solid #1dc078;
+   background-color: #fff;
+   width: 285px;
+}
+
+.mentor_register_join_btn {
+   position: absolute;
+    margin-top: 800px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #1dc078;
+    background-color: #1dc078;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    width: 200px;
+}
+
+.mentor_register_join_btn:hover{
+	cursor:pointer;
+	color:white;
+}
+
+#big_box{
+   width:520px;
+   height: 80px;
+   border: 1px solid rgba(0,0,0,0.09);
+   box-shadow: 0 1px 4px rgb(0 0 0 / 3%);
+   padding-left:5px;
+   padding-top:10px;
+       resize: none;
+}
+
+.mentor_join_btn {
+   position: absolute;
+    margin-top: 800px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1dc078;
+    width: 200px;
+    font-weight: 600;
+    color: #fff;
+}

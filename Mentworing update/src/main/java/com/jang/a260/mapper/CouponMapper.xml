@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jang.a260.mapper.CouponMapper">
+
+
+   <insert id="insertCoupon" keyProperty="cno">
+
+
+      <selectKey keyProperty="cno" resultType="int" order="BEFORE">
+
+         SELECT
+         COALESCE(MAX(cno),0)+1 AS cno FROM coupon
+      </selectKey>
+
+      INSERT INTO coupon (cno,userId,discount_rate,coupon_name)
+      VALUES(#{cno}, #{userId}, #{discount_rate}, #{coupon_name})
+   </insert>
+   
+   <select id="getCoupon" parameterType="String" resultType="CouponVO">
+       
+       select *
+       from coupon
+       where userId =#{userId}
+       
+   </select>
+
+
+   
+   <select id="getCoupon_tocno" parameterType="int" resultType="CouponVO">
+       
+       select *
+       from coupon
+       where cno =#{cno}
+       
+   </select>
+
+
+
+</mapper>

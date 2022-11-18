@@ -1,0 +1,154 @@
+
+
+.board_view_container{
+	width:100%;
+	display:flex;
+	justify-content:center;
+}
+
+.board_view_wrapper{
+	width:70%;
+	margin-top: 140px;
+}
+
+.board_view{
+	width:100%;
+	    box-shadow: 0px 0px 1px 1px;
+    padding: 20px;
+    border-radius:10px;
+}
+
+.board_view_title{
+	    font-size: 40px;
+}
+
+.board_view_title_date{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 11px;
+}
+
+.board_view_date{
+	display:flex;
+	    padding-top: 30px;
+}
+
+.writer_viewcnt_recommendcnt_box{
+	    display: flex;
+    font-size: 18px;
+    padding: 11px 11px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.board_view_text_box{
+	padding: 30px 11px;
+    line-height: 1.7;
+    font-size: 18px;
+    min-height: 600px;
+}
+
+.attachments_box{
+display: flex;
+    font-size: 18px;
+    padding: 11px 11px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.board_view_recommend_btn:hover{
+	color: #1dc078;
+}
+.file_view_link:hover{
+	color: #1dc078;
+}
+.board_view_recommend_btn_box{
+	padding-bottom:20px;
+	display:flex;
+	flex-direction:column;
+}
+
+.board_view_comment_box_area{
+	width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    height: 110px;
+     outline:none;
+     resize:none;
+}
+
+.board_view_comment_box_area_submit{
+	margin-top:10px;
+}
+
+
+.comment_account_button_box{
+	display:flex;
+	justify-content:flex-end;
+	
+}
+.comment_account_button{
+	padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #1dc078;
+    background: #1dc078;
+    color: white;
+    border-radius: 3px;
+    margin-top: 3px;
+	
+}
+
+.border_view_commnet_box_flex{
+	display:flex;
+	flex-direction:column;
+	padding: 11px;
+}
+
+.comment_text_area_box{
+	margin-top: 10px;
+    padding-bottom: 15px;
+}
+
+.comment_writer{
+	font-size:20px;
+	margin-right:10px;
+}
+
+.border_comment_delete_btn{
+	font-size:12px;
+	text-decoration: underline;
+}
+
+.delete_reroad_goback_btn_box{
+	display:flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.delete_reroad_goback_btn_box input{
+	margin-right:20px;
+	border:none;
+	cursor:pointer;
+	background:none;
+}
+
+.delete_reroad_goback_btn_box input:hover{
+	color: #1dc078;
+}
+
+.commen_twriter{
+	margin-right:10px;
+}
+
+.comment_writer_date{
+	font-size:12px;
+	opacity: 0.9;
+	margin-right:10px;
+	position:relative;
+}
+
+.recomment_small_btn{
+	margin-right:5px;
+}

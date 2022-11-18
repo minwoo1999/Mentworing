@@ -1,0 +1,99 @@
+@import "reset.css";
+
+@import "variables.css";
+
+/* Components */
+@import "components/header.css";
+
+@import "components/footer.css";
+
+@import "components/chat.css";
+
+@import "components/my_page.css";
+
+@import "components/paging.css";
+
+/* Screens */
+@import "screens/main.css";
+
+@import "screens/mentor_register.css";
+
+@import "screens/mentor_register_list.css";
+
+@import "screens/board.css";
+
+@import "screens/userlist.css";
+
+@import "screens/mentor_view.css";
+
+@import "screens/mentor_list.css";
+
+@import "screens/videoview.css";
+
+@import "screens/order.css";
+
+@import "screens/video_edit.css";
+
+@import "screens/video_upload.css";
+
+@import "screens/mainbasket.css";
+
+@import "screens/join.css";
+
+@import "screens/MyVideo.css";
+
+@import "screens/mente_list.css";
+
+@import "screens/mentee_videolist.css";
+
+@import "screens/popup.css";
+
+@import "screens/Login_popup.css";
+
+@import "screens/board_view.css";
+
+@import "screens/mentee_mypage_paymentlist.css";
+
+@import "screens/mentor_review.css";
+
+@import "screens/mentee_mypage_coupon.css";
+
+@import "screens/metor_mypage.css";
+
+@import "screens/mentor_mypage_chart.css";
+
+@import "screens/board_wrtie.css";
+
+@import "screens/mentorview_review.css";
+
+@import "screens/course.css";
+
+@import "screens/second_certificate.css";
+
+@import "screens/mentee_Mypage_certificate.css";
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+body {
+	background-color: #ffffff;
+	color: #2e363e;
+	scroll-behavior: smooth;
+	font-family: Spoqa Han Sans Neo, sans-serif;
+	overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+	width:9px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+    border-radius: 50px;
+  }
+
+.main-screen {
+	padding: 0px var(- -horizontal-space);
+}

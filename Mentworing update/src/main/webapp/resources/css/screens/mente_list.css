@@ -1,0 +1,229 @@
+
+
+.mentee_list_title_container {
+   display: flex;
+   justify-content: center;
+   margin-top: 100px;
+   width:100%;
+}
+
+.mentee_list_title_wraper {
+   width:80%;
+   height: auto;
+   margin-bottom: 120px;
+   margin-top: 120px;
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+}
+.mentee_list_title_title{
+	font-size:48px;
+}
+
+.mentee_list_title_subtitle{
+	margin-top:20px;
+	font-size:20px;
+	color: #6B7280;
+}
+
+.mentor_mentee_img{
+	    width: 210px;
+    height: 285px;
+    border-radius: 20px;
+}
+
+.mentor_mentee_list_container{
+	    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 150vh;
+}
+
+.mentor_mentee_list_wraper{
+	width: 77%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mentro_mentee_list_content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px 20px 20px 40px;
+    box-shadow: 0px 0px 5px 5px whitesmoke;
+    border-radius: 15px;
+    max-height: 325px;
+}
+
+.mentee_msg_count{
+	position: absolute;
+    background-color: tomato;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 185px;
+}
+
+.mentro_mentee_list_content:hover > .mentee_msg_count{
+	animation: notificationAnimation 2s ease-in-out infinite;
+}
+
+
+
+@keyframes notificationAnimation {
+  0%{
+    transform: none;
+  }
+  50%{
+    transform: translateY(-5px) rotateY(180deg);
+  }
+  100%{
+    transform: none;
+  }
+}
+
+.mentee_list_content_mentee_name{
+	width: 250px;
+    height: 50px;
+    background: #ffffff;
+    margin-left: -25px;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    line-height: 1.25;
+    /* box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%); */
+    padding: 5px;
+    top: 0;
+    margin-top: 275px;
+}
+
+.mentee_list_content_mentee_name i{
+	margin-right: 10px;
+    color: #1dc078;
+    font-size:20px;
+}
+
+.menteeLectureListBox{
+	display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 40px;
+    width: 100%;
+    height: 90%;
+    max-height: 90%;
+}
+
+.meteeList_mypage_main_wraper{
+	width: 1190px;
+    background: #FFFFFF;
+    padding: 20px 8px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 2px 8px 12px 0 rgb(20 20 20 / 2%);
+    margin-left: 3px;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 1450px;
+}
+
+.meteeList_mypage_main_wraper::-webkit-scrollbar{
+	width:9px;
+}
+.meteeList_mypage_main_wraper::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 50px;
+}
+
+.meteeList_mypage_main_wraper::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+    border-radius: 50px;
+  }
+  
+  .menteeLectureBoxTitle{
+  	height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 35px;
+  }
+  
+  .MenteeLectureBox{
+  height: 90%;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+  
+  .MenteeLectureBox::-webkit-scrollbar{
+	width:9px;
+}
+.MenteeLectureBox::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 50px;
+}
+
+.MenteeLectureBox::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+    border-radius: 50px;
+  }
+  
+  .LectureTitle_RecentDate{
+  	display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menteeVideoName{
+  margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  
+  .PrograssBox{
+  	width: 100%;
+    display: flex;
+  }
+  
+  .prograssVarBox progress {
+      width: 660px;
+    border: none;
+    height: 5px;
+  }
+  
+  .deadLinePercentBox {
+    display: flex;
+    font-size: .875rem;
+    align-items: center;
+    font-weight: 300;
+    padding-left: 15px;
+}
+
+.leftPrograssBox{
+	display: flex;
+    font-size: .875rem;
+    align-items: center;
+    font-weight: 300;
+    padding-right: 15px;
+}
+
+.prograssVarBox{
+	display: flex;
+    align-items: center;
+}
+
+.LectureListWrapper{
+	margin-top:30px;
+}

@@ -1,0 +1,30 @@
+
+
+.order_table {
+       margin-left:auto; 
+    margin-right:auto;
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+    margin-top: 38px;
+}
+.order_table thead th {
+    background-color: #59cf92;
+    font-weight: bold;
+    border: solid 1px #DDEEEE;
+    color : #fff;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 195px;
+    
+}
+.order_table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+    vertical-align: middle;
+    text-align: center;
+}

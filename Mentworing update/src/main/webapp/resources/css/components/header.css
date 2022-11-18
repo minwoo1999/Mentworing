@@ -1,0 +1,351 @@
+.top_header {
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fafafa;
+	border-bottom: 1px solid #f1f3f5;
+}
+
+.bottom_header_right_menu{
+	display:flex;
+	align-items: center;
+}
+
+.left_menu{
+	text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 16px;
+	
+}
+
+.bottom_header button {
+	background: none;
+	border: none;
+}
+
+.bottom_header_left_menu{
+	display: flex;
+    align-items: center;
+}
+
+
+.mainheader_mentor_register {
+	border: none;
+	background: #fafafa;
+	color: #1dc078;
+	font-weight: 800;
+}
+
+.top_header_main {
+	max-width: 1300px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.top_header_left_menu i {
+	color: #1dc078;
+	margin-left: 2px;
+}
+
+.bottom_header {
+	display: flex;
+    background-color: #ffffff;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 4px 0 hsl(0deg 0% 81% / 50%);
+}
+
+note-num {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 3;
+	height: 20px;
+	width: 20px;
+	line-height: 20px;
+	text-align: center;
+	background-color: red;
+	border-radius: 15px;
+	display: inline-block;
+}
+
+#notification {
+	background-image: url('../images/notification.svg');
+	position: relative;
+}
+
+.bottom_header_main {
+	display: flex;
+	justify-content: space-between;
+	min-width: 1420px;
+	align-items: center;
+}
+.bottom_header_main a:hover, button:hover{
+	color: #1dc078;
+}
+.title {
+	font-size:30px;
+	color: #1dc078;
+	padding-bottom: 8px;
+	margin-right:10px;
+}
+
+.bottom_header_right_menu button {
+	align-items: center;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.chat_count_bedge{
+	position:absolute;
+	    background-color: tomato;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top:0;
+    margin-left:15px;
+    margin-top:10px;
+}
+
+.shopping_cart ,#chat_div, .my_page, .bottom_header_right_menu i{
+	padding:8px 15px;
+}
+
+.bottom_header_right_menu i{
+	font-size:18px;
+}
+
+.logout{
+	font-size:16px;
+}
+
+.login, .join{
+	font-size:16px;
+}
+
+
+.mentor_header_margin{
+	margin-right:2px;	
+}
+
+#basket_slide{
+	display: none;
+    box-shadow: 0px 0px 7px -2px;
+    width: 435px;
+    border-radius: 15px;
+    background: #ffffff;
+    right: 0;
+    position: fixed;
+    z-index: 99999;
+        top: 0;
+    margin-top: 64px;
+    margin-right: 290px;
+    min-height: 200px;
+}
+
+.login_header_icon{
+	width:22px;
+	height:22px;
+}
+
+#comment_icon{
+	width:20px;
+	height:20px;
+}
+
+.caht_slide_title{
+	    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+    margin-bottom: 10px;
+    border: 0px solid #ffffff;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: 700;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.caht_slide_title span{
+	font-weight: 400;
+    font-size: 19px;
+}
+
+.point_text{
+	color:#59cf92;
+}
+
+.basket_slide_inside{
+	display: flex;
+    flex-direction: column;
+    padding: 0px 5px;
+}
+
+.basket_slide_content{
+	display:flex;
+	align-items:center;
+	height:60px;
+}
+
+.basket_slide_content_title_price{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	height:100%;
+	margin-left:15px;
+}
+
+.basket_slide_title_bar{
+	display: flex;
+    padding: 20px 10px 10px 10px;
+    border: 0px solid #ffffff;
+    border-radius: 10px 10px 0px 0px;
+    background: #ffffff;
+    font-weight: 700;
+    height: 50px;
+}
+
+.basket_slide_footer_bar{
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 0px;
+    border: 0px solid #ffffff;
+    border-radius: 0px 0px 10px 10px;
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+.basket_slide_price_box{
+	border: none;
+    text-align: right;
+    width: 90px;
+    font-weight: 700;
+    font-size: 18px;
+    background: none;
+}
+
+.basket_slide_content_box{
+    padding: 0px 5px;
+    padding-top: 6px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 246px;
+    border-top: 1px solid #cbcbcb;
+    min-height: 95px;
+}
+
+.chat_box_message_box{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side_margin_span{
+	margin:0px 10px;
+}
+.basket_count_bedge{
+	    position: absolute;
+    background-color: tomato;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top: 0;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.cart_login_header_icon{
+	width:22px;
+	height:22px;
+}
+.talk_login_header_icon{
+	width:22px;
+	height:22px;
+}
+.mypage_login_header_icon{
+	width:22px;
+	height:22px;
+}
+
+.chat_name_width{
+	width: 58px;
+    display: inline-block;
+    text-align: center;
+}
+
+.message_box_flex{
+	display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.basket_title{
+	    color: black;
+    font-weight: 500;
+}
+
+.basket_prcie_span{
+	    display: flex;
+    align-items: center;
+    color: #808080;
+    font-weight: 300;
+}
+
+
+.basket_slide_content_box::-webkit-scrollbar{
+	width:9px;
+}
+.basket_slide_content_box::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 50px;
+}
+
+.basket_slide_content_box::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+    border-radius: 50px;
+  }
+  
+  
+  .chat_box_wrapper{
+    padding: 0px 5px;
+    padding-top: 6px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 246px;
+  }
+  
+  .menteeSendChatCount {
+    position: absolute;
+    background-color: tomato;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top: 0;
+    margin-left: 25px;
+    margin-top: 10px;
+}

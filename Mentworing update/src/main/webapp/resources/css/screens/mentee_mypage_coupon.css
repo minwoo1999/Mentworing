@@ -1,0 +1,15 @@
+
+
+.table_container{
+	width:100%;
+	overflow: auto;
+}
+
+#coupon_list_table{
+	width:95%;
+	text-align: center;
+}
+
+.coupon_list_table_title_align{
+	text-align: center;
+}

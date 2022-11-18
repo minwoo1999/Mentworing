@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jang.a260.mapper.UserMapper">
+
+
+
+
+	<select id="getUser" parameterType="String" resultType="User">
+		SELECT *
+		FROM member_tbl
+		WHERE id = #{id}
+	</select>
+
+	<insert id="insertUser" keyProperty="no">
+		<selectKey keyProperty="no" resultType="int" order="BEFORE">
+			SELECT
+			COALESCE(MAX(no), 0) + 1 AS no
+			FROM member_tbl
+		</selectKey>
+
+		INSERT INTO member_tbl (no, id, pass, name, zip, addr1, addr2, phone,
+		email, birthday)
+		VALUES (#{no}, #{id}, #{pass}, #{name}, #{zip},
+		#{addr1}, #{addr2},
+		#{phone}, #{email}, #{birthday} )
+	</insert>
+
+	<update id="updateUser" parameterType="User">
+		UPDATE member_tbl
+		SET
+		pass=#{pass},zip=#{zip},addr1=#{addr1},addr2=#{addr2},phone=#{phone},email=#{email},birthday=#{birthday}
+		WHERE id = #{id}
+	</update>
+
+	<select id="findId" parameterType="String" resultType="User">
+		SELECT *
+		FROM member_tbl
+		WHERE name = #{name} and email = #{email}
+	</select>
+
+	<select id="findPass" parameterType="String" resultType="User">
+		SELECT *
+		FROM member_tbl
+		WHERE id = #{id} and email = #{email}
+	</select>
+
+	<update id="updatePass" parameterType="User">
+		UPDATE member_tbl
+		SET
+		pass=#{pass}
+		WHERE id = #{id}
+	</update>
+
+	<insert id="mentorregister" keyProperty="mano">
+		<selectKey keyProperty="mano" resultType="int"
+			order="BEFORE">
+			SELECT
+			COALESCE(MAX(mano), 0) + 1 AS mano
+			FROM MENTO_APPROVE
+		</selectKey>
+
+		INSERT INTO MENTO_APPROVE
+		(mano,no,certificate,major,mainintroduce,profile,officetype,rcmcomment,headcomment)
+		VALUES (#{mano},
+		#{no}, #{certificate}, #{major}, #{mainintroduce},
+		#{profile}, #{officetype}, #{rcmcomment}, #{headcomment})
+
+	</insert>
+
+	<select id="selectmentorregister" resultType="MentorApprove">
+
+		SELECT *
+		FROM
+		MENTO_APPROVE
+		where withhold =#{w}
+		order by mano
+
+	</select>
+
+	<select id="mentorregistercheck" resultType="String">
+
+		SELECT mano
+		FROM
+		MENTO_APPROVE
+		WHERE no = #{no} and withhold!= #{w}
+
+
+	</select>
+
+	<select id="selectAlluser" resultType="User">
+
+		select *from member_tbl
+		order by no
+
+	</select>
+
+	<delete id="deleteMentorApprove">
+
+		delete from MENTO_APPROVE
+		where mano= #{mano}
+
+	</delete>
+
+
+	<update id="updateMentorApprove" parameterType="MentorApprove">
+		UPDATE
+		MENTO_APPROVE
+		SET
+		withhold=#{withhold}
+		WHERE mano = #{mano}
+	</update>
+
+	<select id="getMentorApprove" resultType="MentorApprove">
+
+		select *
+		from
+		MENTO_APPROVE
+		where mano= #{mano}
+
+	</select>
+
+	<select id="getUserList" parameterType="SearchVO"
+		resultType="User">
+		SELECT no, id, name, addr1, phone, email
+		FROM ( SELECT ROWNUM AS
+		rnum,
+		a.*
+		FROM ( SELECT * FROM member_tbl where no is not null
+		<if test="keyword != null">
+			<choose>
+				<when test="type == 'id'"> AND id like '%'||#{keyword}||'%' </when>
+				<when test="type == 'name'">AND name like '%'||#{keyword}||'%' </when>
+				<when test="type == 'email'"> AND email like '%'||#{keyword}||'%' </when>
+			</choose>
+		</if>
+
+
+		order by no ) a
+		)
+		WHERE rnum between #{startRow} and #{endRow}
+	</select>
+
+	<select id="getTotalRow" parameterType="SearchVO"
+		resultType="int">
+		SELECT count(*) AS totalrow
+		FROM member_tbl where no is not null
+
+		<if test="keyword != null">
+			<choose>
+				<when test="type == 'id'"> AND id like '%'||#{keyword}||'%' </when>
+				<when test="type == 'name'">AND name like '%'||#{keyword}||'%' </when>
+				<when test="type == 'email'"> AND email like '%'||#{keyword}||'%' </when>
+			</choose>
+		</if>
+
+
+
+	</select>
+	<select id="getUserformento" resultType="User">
+
+		select *
+		from member_tbl
+		where no= #{no}
+
+	</select>
+
+
+	<insert id="insertPayment" keyProperty="pno">
+		<selectKey keyProperty="pno" resultType="int" order="BEFORE">
+			SELECT
+			COALESCE(MAX(pno), 0) + 1 AS pno
+			FROM payment
+		</selectKey>
+
+		INSERT INTO payment
+		(pno,userId,amount)
+		VALUES
+		(#{pno}, #{userId},
+		#{amount})
+
+	</insert>
+
+	<insert id="insertPaymentDetail" keyProperty="pdno">
+		<selectKey keyProperty="pdno" resultType="int"
+			order="BEFORE">
+			SELECT
+			COALESCE(MAX(pdno), 0) + 1 AS pdno
+			FROM payment_detail
+		</selectKey>
+
+		INSERT INTO payment_detail
+		(pdno,vno,userId,mno,vfilename,pno,price)
+		VALUES
+		(#{pdno}, #{vno}, #{userId}, #{mno}, #{vfilename}, #{pno},
+		#{price})
+
+	</insert>
+
+	<select id="selectchattingname" resultType="String">
+
+		select *
+		from
+		member_tbl
+		where name =#{name}
+
+
+	</select>
+
+	<insert id="insertMemberprofile" keyProperty="mpno">
+		<selectKey keyProperty="mpno" resultType="int"
+			order="BEFORE">
+			SELECT
+			COALESCE(MAX(mpno), 0) + 1 AS mpno
+			FROM member_profile
+		</selectKey>
+
+		INSERT INTO member_profile
+		(mpno,userId,name,profile,no)
+		VALUES
+		(#{mpno}, #{userId}, #{name}, #{profile}, #{no})
+
+	</insert>
+
+
+	<select id="getUserProfile" resultType="MemberProfileVO">
+
+		select *
+		from
+		member_profile
+		where userId =#{userId}
+
+
+	</select>
+
+	<update id="updateMemberprofile" parameterType="MemberProfileVO">
+		UPDATE
+		member_profile
+		SET
+		profile=#{profile}
+		WHERE userId = #{userId}
+	</update>
+
+	<select id="UserProfileList" resultType="MemberProfileVO">
+
+		select *
+		from
+		member_profile
+
+
+	</select>
+
+	<update id="updateMemberprofile2" parameterType="String">
+		UPDATE
+		member_profile
+		SET
+		profile=#{profile}
+		WHERE userId = #{userId}
+	</update>
+	
+	<insert id="insert_second_authentication">
+	    
+	    <selectKey keyProperty="sano" resultType="int"
+			order="BEFORE">
+			SELECT
+			COALESCE(MAX(sano), 0) + 1 AS sano
+			FROM SECOND_AUTHENTICATION
+		</selectKey>
+
+		INSERT INTO SECOND_AUTHENTICATION
+		(sano,userId,WHETHER_ON_OFF)
+		VALUES
+		(#{sano}, #{userId}, #{WHETHER_ON_OFF})
+	    
+	</insert>
+	
+	<select id="select_authenticationId" resultType="Integer">
+	    
+	    select *
+	    from SECOND_AUTHENTICATION
+	    where userId = #{userId}
+	    
+	</select>
+	
+	<update id="update_authentication">
+	    UPDATE
+		SECOND_AUTHENTICATION
+		SET
+		WHETHER_ON_OFF= #{WHETHER_ON_OFF}
+		WHERE userId = #{userId}
+	    
+	</update>
+	
+	<select id="check_authenticationId" resultType="String">
+	    
+	    select WHETHER_ON_OFF
+	    from SECOND_AUTHENTICATION
+	    where userId = #{userId}
+	    
+	</select>
+
+</mapper>

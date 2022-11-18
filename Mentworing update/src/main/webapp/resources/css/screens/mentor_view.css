@@ -1,0 +1,453 @@
+
+.mentor_view_content_nav {
+	display: flex;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 100%;
+	justify-content: center;
+}
+
+.mentor_view_content_header_container {
+	display: flex;
+	width: 73%;
+}
+
+.mentor_view_content_header {
+	display: flex;
+	flex-direction: column;
+}
+
+.mentor_view_content_header a {
+	color: #1e1e1e;
+	font-size: 24px;
+}
+
+.fa-solid fa-computer {
+	margin-left: 10px;
+}
+
+.mentor_view_content_sub_title {
+	margin-top: 30px;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.profile_container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	padding: 40px 0px;
+	justify-content: center;
+	margin-top: 80px;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.profile_img_box {
+	margin-right: 110px;
+	position: relative;
+}
+
+.btn_profile_settings {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px;
+}
+
+.profile-image img {
+	width: 230px;
+	height: 307px;
+	border-radius: 20px;
+}
+
+.profile_name, .btn_profile_settings i, .class_intro {
+	font-size: 28px;
+	font-weight: 800;
+}
+
+.profile_information_box {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 1050px;
+	justify-content: flex-start;
+	padding-top: 10px;
+}
+
+.profile_chat {
+	display: flex;
+    justify-content: center;
+    padding: 5px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    margin: 0px 10px 10px 0px;
+}
+
+.profile_chat button{
+	    border: none;
+    background: none;
+}
+
+.chat_btn_img{
+	    width: 75px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile_user_intro {
+	font-size: 15px;
+}
+
+.profile_user_intro_box {
+	max-width: 500px;
+	height: auto;
+}
+
+.profile_title {
+	margin-bottom: 50px;
+}
+
+.class_intro {
+	padding-left: 15px;
+	margin-bottom: 30px;
+}
+
+.profile_class_intro {
+	padding-left: 15px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	font-size: 18px;
+	line-height: 1.3;
+}
+
+.profile_rcmcomment_intro {
+	font-size: 18px;
+	padding-left: 15px;
+	margin-top: 20px;
+	line-height: 0.9;
+}
+
+.mentorview_container {
+	width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mentorview_wraper {
+	width: 78%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: 8px;
+    min-height: 1000px;
+}
+
+.mentorview_content_img {
+	width: 400px;
+	height: 300px;
+	position: relative;
+}
+
+.mentorview_content {
+	position: relative;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: 325px;
+}
+
+.mentorview_content input {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	margin-left: 28px;
+	margin-top: 23px;
+}
+
+.mentorview_content input[type=checkbox] {
+	zoom: 1.8;
+}
+
+.mentorview_content_information {
+	width: 330px;
+	height: 100px;
+	background: #ffffff;
+	position: absolute;
+	margin-left: 2px;
+	bottom: 5px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 20px 25px -5px rgb(0 0 0/ 10%), 0 8px 10px -6px
+		rgb(0 0 0/ 10%);
+}
+
+.mentorview_content_name {
+	font-size: 20px;
+	    text-align: center;
+}
+
+.mentorview_content_pay {
+	font-size: 16px;
+	color: #000000;
+	margin-top: 8px;
+}
+
+.basketbutton {
+	margin-top:100px;
+}
+
+.basketbutton input {
+	width: 250px;
+	height: 50px;
+	background: #1dc078;
+	border: none;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 10px;
+	display: flex;
+    justify-content: center;
+}
+
+.basketbutton i {
+	position: absolute;
+	font-size: 20px;
+	color: #fff;
+}
+
+.cont{
+	width: 100%;
+	margin: 0 auto;
+	display: none;
+	z-index: 101;
+	position: absolute;
+	top: 0;
+}
+
+.stars {
+	min-width: 450px;
+	width: 200px;
+	min-height: 290px; 
+	background: #ffffff;
+	position: absolute;
+	z-index: 10;
+	padding: 15px 35px;
+	border-radius: 5px;
+	box-shadow: 0 5px 5px #f3f3f3;
+	margin-top: 410px;
+    margin-left: 150px;
+    animation: fadeIn 0.5s linear;
+}
+
+  hr{
+    margin: 20px;
+    border: none;
+    border-bottom: thin solid rgba(255,255,255,.1);
+  }
+  
+  div.title{
+    font-size: 2em;
+  }
+  
+  h1 span{
+    font-weight: 300;
+    color: #Fd4;
+  }
+  
+  
+  input.star{
+    display: none;
+  }
+  
+  label.star {
+    float: right;
+    font-size: 36px;
+    color: #444;
+    transition: all .2s;
+  }
+  
+  input.star:checked ~ label.star:before {
+    content:'\f005';
+    color: #FD4;
+    transition: all .25s;
+  }
+  
+  
+  input.star-5:checked ~ label.star:before {
+    color:#FE7;
+    text-shadow: 0 0 20px #952;
+  }
+  
+  input.star-1:checked ~ label.star:before {
+    color: #F62;
+  }
+  
+  label.star:hover{
+    transform: rotate(-15deg) scale(1.3);
+  }
+  
+  label.star:before{
+    content:'\f006';
+    font-family: FontAwesome;
+    cursor:pointer;
+  }
+  
+  .rev-box{
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    transition: all .25s;
+    margin-top: 30px;
+  }
+  
+  textarea.review{
+    border: 1px solid;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+        resize: none;
+  }
+  
+  label.review{
+   display: block;
+    transition: opacity .25s;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  
+  
+  input.star:checked ~ .rev-box{
+    height: 125px;
+    overflow: visible;
+  }
+  
+ .mento_review_box{
+ 	text-align:center;
+ 	position: relative;
+ }
+.mento_review_box button{
+	    width: 230px;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 11px 11px;
+    border: none;
+    background: #844204;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 7px 3px 12px 4px #844204;
+}
+
+.plus_text{
+	font-size:20px;
+	margin-right:5px;
+}
+
+.mntor_review_box_nav_bar_close{
+	position: absolute;
+    right: 0;
+    
+    top: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.mntor_review_box_nav_bar{
+	text-align:center;
+	    font-size: 18px;
+	margin-bottom:10px;
+}
+
+.star_box{
+	display:flex;
+	direction:rlt;
+}
+
+.star-5{
+	margin-right:67px;
+}
+
+.star-1, .star-2, .star-3,.star-4{
+	margin-right:10px;
+}
+
+.review_complete_btn{
+	margin-left: 149px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #1dc078;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.mentor_review_plus_btn{
+	color:white;
+	font-size:17px;
+}
+
+.mento_review_box i{
+	color:#1dc078;
+	margin-right:5px;
+	font-size:20px;
+}
+
+.lecture_review_container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.lecture_review_wrapper{
+	width: 73%;
+	display:flex;
+	justify-content:center;
+	margin: 50px 0px;
+	justify-content: space-around;
+}
+
+.lecture_review_wrapper a{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    height: 40px;
+    font-size: .9375rem;
+    font-weight: 700;
+    color: #adb5bd;
+    border: 1px solid #dee2e6;
+    background: none;
+    cursor: pointer;
+    width:49%;
+    border-radius:10px;
+}
+
+#choose_btn{
+	color:#1dc078;
+	border-color:#1dc078;
+}
+
+.login_kakao_btn{
+	margin-top:20px;
+}

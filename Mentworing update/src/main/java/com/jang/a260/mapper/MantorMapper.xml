@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jang.a260.mapper.MantorMapper">
+
+
+
+	<insert id="insertMentor">
+
+		INSERT INTO mentor
+		(mno,no,certificate,major,introduce,profile,officetype,rcmcomment,headcomment)
+		VALUES(#{mno}, #{no}, #{certificate}, #{major}, #{introduce},
+		#{profile}, #{officetype}, #{rcmcomment}, #{headcomment})
+
+
+	</insert>
+
+	<select id="selectmentor" resultType="String">
+
+		select no
+		from mentor
+		where
+		no =#{no}
+
+	</select>
+
+	<select id="mentorList" resultType="MentorVO">
+
+		select *
+		from mentor
+		order by
+		mno
+
+
+	</select>
+
+	<select id="getmentorList" resultType="MentorVO">
+
+		select *
+		from mentor
+		order
+		by
+		mno
+
+	</select>
+
+	<select id="selectmentorview" resultType="MentorVO">
+
+		select *
+		from mentor
+		where mno =#{mno}
+
+	</select>
+
+	<select id="UsernoToMentormno" resultType="Integer">
+
+		select mno
+		from mentor
+		where no =#{no}
+	</select>
+	<select id="MentormnoToUserno" resultType="int">
+
+		select no
+		from mentor
+		where mno =#{mno}
+	</select>
+
+	<insert id="insertVideo" keyProperty="vno">
+
+		<selectKey keyProperty="vno" resultType="int" order="BEFORE">
+
+			SELECT
+			COALESCE(MAX(vno),0)+1 AS vno FROM video
+		</selectKey>
+
+		INSERT INTO video
+		(vno,videotype,videoname,videoprice,videointroduce,mno,videofile)
+		VALUES( #{vno}, #{videotype}, #{videoname}, #{videoprice},
+		#{videointroduce}, #{mno},
+		#{videofile})
+
+	</insert>
+
+	<select id="videoList" resultType="Video">
+
+		select *
+		from video
+		order by vno
+
+
+	</select>
+
+	<select id="videoListvideotype" resultType="Video">
+
+		select *
+		from video
+		where videotype= #{videotype}
+		order by vno
+
+
+
+	</select>
+
+	<select id="getvideoview" resultType="Video">
+
+		select *
+		from video
+		where vno
+		= #{vno}
+
+	</select>
+
+	<select id="mentorvideoList" resultType="Video">
+
+		select *
+		from video
+		where
+		mno= #{mno}
+
+
+	</select>
+
+	<delete id="deletevideo">
+
+		delete
+		from video
+		where vno = #{vno}
+
+	</delete>
+
+
+
+	<update id="updatevideo" parameterType="Video">
+		update video set
+		videotype = #{videotype},
+		videoname = #{videoname},
+		videoprice =
+		#{videoprice},
+		videointroduce = #{videointroduce},
+		videofile =
+		#{videofile}
+		where vno = #{vno}
+	</update>
+
+	<select id="getpaymentdetailList" parameterType="SearchVO"
+		resultType="paymentDetailVO">
+		SELECT *
+		FROM ( SELECT ROWNUM AS
+		rnum, a.*
+		FROM ( SELECT * FROM
+		payment_detail where pdno is not null
+		<if test="keyword != null">
+			<choose>
+				<when test="type == 'id'"> AND id like '%'||#{keyword}||'%' </when>
+				<when test="type == 'name'">AND name like '%'||#{keyword}||'%' </when>
+				<when test="type == 'email'"> AND email like '%'||#{keyword}||'%' </when>
+			</choose>
+		</if>
+
+
+		order by pdno ) a
+		)
+		WHERE rnum between #{startRow} and #{endRow}
+
+	</select>
+
+
+
+
+	<select id="getTotalRow" parameterType="SearchVO"
+		resultType="int">
+		SELECT count(*) AS totalrow
+		FROM payment_detail where pdno is not null
+
+		<if test="keyword != null">
+			<choose>
+				<when test="type == 'id'"> AND id like '%'||#{keyword}||'%' </when>
+				<when test="type == 'name'">AND name like '%'||#{keyword}||'%' </when>
+				<when test="type == 'email'"> AND email like '%'||#{keyword}||'%' </when>
+			</choose>
+		</if>
+
+
+
+	</select>
+
+	<select id="getpaymentcheck" resultType="String">
+
+		select userId
+		from
+		payment_detail
+		where userId =#{userId} and mno=#{mno}
+
+	</select>
+
+	<select id="getPaymentuserId" resultType="String">
+
+
+		select userId
+		from
+		payment
+		order by pno
+
+	</select>
+
+	<select id="getPaymentPno" parameterType="String"
+		resultType="int">
+
+		select max(pno)
+		from payment
+		where userId =#{userId}
+
+	</select>
+
+	<insert id="insertVideoApply" keyProperty="vano">
+
+		<selectKey keyProperty="vano" resultType="int"
+			order="BEFORE">
+
+			SELECT
+			COALESCE(MAX(vano),0)+1 AS vano FROM video_apply
+		</selectKey>
+
+		INSERT INTO video_apply
+		(vano,vno,userId,content,profile)
+		VALUES(
+		#{vano}, #{vno}, #{userId}, #{content},
+		#{profile})
+
+	</insert>
+
+	<select id="getVideoApply" parameterType="int"
+		resultType="VideoApplyVO">
+
+		select *
+		from video_apply
+		where vno =#{vno}
+		order by va_date
+		desc
+
+	</select>
+
+	<update id="updatementorprofile" parameterType="MentorVO">
+		update mentor set
+		profile = #{profile}
+		where mno = #{mno}
+	</update>
+
+
+	<delete id="deleteVideoApply">
+
+		delete
+		from video_apply
+		where vano = #{vano}
+
+	</delete>
+
+	<select id="selectChartsumprice" resultType="IncomeVO">
+
+
+		select
+		to_char(payment_date,'yyyy-mm') as
+		payment_date,sum(price) as price
+		from payment_detail
+		where mno= #{mno} and payment_date between
+		#{start_date} and #{end_date}
+		group by
+		to_char(payment_date,'yyyy-mm')
+		order by payment_date
+
+	</select>
+
+	<select id="getPaymentDetail_list" resultType="String">
+
+		select
+		distinct(userId)
+		from payment_detail
+		order by userId
+	</select>
+
+	<select id="mentee_list" resultType="Mentee_list_VO">
+
+		select v.videofile,v.videoname,m.profile,m.name,pd.payment_date,v.vno,mt.no
+		from payment_detail pd join member_tbl mt
+		on pd.userId=mt.id
+		join
+		member_profile m
+		on m.no=mt.no
+		join video v
+		on v.videofile=pd.vfilename
+	</select>
+
+
+
+
+
+
+
+</mapper>

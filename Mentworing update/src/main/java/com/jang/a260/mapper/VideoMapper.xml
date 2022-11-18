@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jang.a260.mapper.VideoMapper">
+
+
+	<select id="course_list" resultType="CourseVO">
+		select
+		videotype,vno,videofile,videoname,name,videoprice
+		from mentor m join
+		video v
+		on
+		m.mno=v.mno
+		join member_tbl mt
+		on mt.no=m.no
+	</select>
+
+	<select id="order_best_course" resultType="best_courseVO">
+
+
+		select *
+		from( select vfilename,count(vfilename) as bestvideo_count
+		from payment_detail
+		group by(vfilename)
+		order by COUNT(vfilename) desc
+		)
+		where rownum <![CDATA[<=]]>
+		3
+
+	</select>
+
+	<insert id="video_record_go" parameterType="Video_recordVO">
+
+		<selectKey keyProperty="vrno" resultType="int"
+			order="BEFORE">
+			SELECT
+			COALESCE(MAX(vrno), 0) + 1 AS vrno
+			FROM video_record
+		</selectKey>
+
+		INSERT INTO video_record (vrno,vno,no,video_record,video_end)
+		VALUES
+		(#{vrno},
+		#{vno}, #{no}, #{video_record}, #{video_end})
+	</insert>
+
+	<select id="get_video_record" parameterType="int"
+		resultType="String">
+
+		select *from
+		video_record
+		where vno =#{vno} and no =#{no}
+
+	</select>
+
+	<update id="update_video_record" parameterType="Video_recordVO">
+
+		UPDATE
+		video_record
+		SET
+		video_record=#{video_record} , watch_date= sysdate
+		WHERE vno = #{vno} and no =#{no}
+		
+	</update>
+	
+	<select id="select_all_vieow_record" resultType="Video_recordVO">
+		select *from 
+		video_record
+		order by watch_date desc
+	</select>
+
+	<select id="List_video_record" resultType="Video_recordVO">
+
+		select *from
+		video_record
+		where no = #{no}
+		order by watch_date desc
+		
+	</select>
+
+	<select id="get_video_record_DTO" parameterType="int"
+		resultType="Video_recordVO">
+
+		select *from
+		video_record
+		where vno =#{vno} and no =#{no}
+
+	</select>
+
+	<select id="videoview_get_videolist"
+		resultType="Videoview_videolist">
+
+		select videofile,price,videotype,name,videoname,v.vno
+		from
+		payment_detail pd join video v
+		on pd.vfilename=v.videofile
+		join mentor m
+		on m.mno=v.mno
+		join member_tbl mt
+		on mt.no=m.no
+		where userId = #{userId}
+
+	</select>
+
+	<select id="vidoeview_get_payment_count" resultType="best_courseVO">
+
+		select *
+		from( select vfilename,count(vfilename) as bestvideo_count
+		from payment_detail
+		group by(vfilename)
+		order by COUNT(vfilename) desc
+		)
+	</select>
+
+
+
+
+
+
+</mapper>

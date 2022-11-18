@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jang.a260.mapper.MenteeMapper">
+
+
+	<select id="getpaymentdetailList_menteevideo"
+		resultType="paymentDetailVO">
+
+		select *
+		from payment_detail
+		order by pdno
+
+	</select>
+
+	<select id="getpaymentVO" resultType="paymentVO">
+
+		select *
+		from payment
+		where
+		userId = #{userId}
+		order by pno
+
+	</select>
+
+	<select id="getpaymentdetail" resultType="int">
+
+		select distinct(mno)
+		from payment_detail
+		where userId = #{userId}
+
+
+	</select>
+	
+	<select id="paymentdetail_vnocheck" resultType="String"> 
+	    
+	    select *
+	    from payment_detail
+	    where userId= #{userId} and vno= #{vno} 
+	    
+	</select>
+
+
+
+
+
+
+</mapper>

@@ -1,0 +1,67 @@
+.join_title_box{
+	font-size: 50px;
+    color: #1dc078;
+    font-weight: 700;
+    padding-bottom:20px;
+}
+
+.joinFormContainer{
+	width: 100%;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top:150px;
+}
+
+.joinFormWrpaer{
+    padding: 25px;
+    width: 30%;
+}
+
+#fregisterform{
+	display:flex;
+	 flex-direction: column;
+}
+
+.joinInfutTitle{
+	    margin: 19px 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.joinInputBox{
+	    display: block;
+    position: relative;
+    width: 100%;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    background: whitesmoke;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.joinInputBox:focus{
+	border-color:#1dc078;
+	background: #fff;
+}
+
+.joinFormSubmitBtn{
+	display: block;
+    width: 100%;
+    padding: 15px 0 15px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #fff;
+    border: solid 1px rgba(0,0,0,.08);
+    background-color: #03c75a;
+    margin-top:20px;
+}
+
+.inputComment{
+	padding-top:10px;
+}

@@ -1,0 +1,17 @@
+
+
+.metor_mypage_join_form{
+	display:flex;
+	justify-content:center;
+	width: 100%;
+}
+
+#metor_mypage_join_form_from {
+    width: 95%;
+}
+
+#metor_mypage_join_form_from{
+	display: flex;
+    flex-direction: column;
+    width: 70%;
+}

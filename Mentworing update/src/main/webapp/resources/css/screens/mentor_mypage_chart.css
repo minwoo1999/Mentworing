@@ -1,0 +1,48 @@
+
+.metor_mypage_chart_main_wraper{
+	width: 1190px;
+    background: #FFFFFF;
+    padding: 20px 8px 8px 8px;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 2px 8px 12px 0 rgb(20 20 20 / 2%);
+    margin-left: 3px;
+}
+
+canvas {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+#canvas{
+	    margin-top:20px;
+}
+
+.mentor_chart_submit_box{
+	text-align: center;
+    margin-top: 80px;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mentor_chart_submit_box button{
+	border:none;
+	height: 30px;
+	margin-left:4px;
+	padding: 0px 10px;
+	border-radius: 5px;
+	background: none;
+	border: 1px solid #1dc078;
+}
+
+.mentor_chart_submit_box input{
+	border: 1px solid #1dc078;
+    border-radius: 5px;
+    width: 115px;
+    height: 30px;
+    text-align:center;
+    margin-left:10px;
+}

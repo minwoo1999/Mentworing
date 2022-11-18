@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jang.a260.mapper.ChatMapper">
+
+
+	<insert id="insertChat" keyProperty="cno">
+
+
+		<selectKey keyProperty="cno" resultType="int" order="BEFORE">
+
+			SELECT
+			COALESCE(MAX(cno),0)+1 AS cno FROM chat
+		</selectKey>
+
+		INSERT INTO chat (cno,name,message,roomno)
+		VALUES(#{cno}, #{name},
+		#{message}, #{roomno})
+	</insert>
+
+	<select id="getChatList" resultType="ChatVO">
+		SELECT
+		name,message,chat_date,roomno,message_check2
+		FROM chat
+		order by
+		chat_date asc
+	</select>
+
+	<select id="getChatListforuserId" parameterType="int"
+		resultType="ChatVO">
+
+		SELECT
+		name,message,chat_date,roomno
+		from chat
+		where roomno
+		=#{roomno}
+		order by chat_date asc
+
+	</select>
+
+	<update id="updateChatmessage">
+		UPDATE
+		chat
+		SET
+		message_check= #{check}
+		WHERE roomno =
+		#{roomno} and name= #{name}
+	</update>
+
+	<update id="updateChatmessage2">
+		UPDATE
+		chat
+		SET
+		message_check2= #{check}
+		WHERE roomno =
+		#{roomno} and name= #{name}
+	</update>
+
+	<select id="ChatmessageNotification" resultType="int">
+		select count(*)
+		from chat
+		where roomno =#{roomno} and name= #{name} and message_check=
+		#{check}
+
+
+	</select>
+
+	<select id="Chatmessage2Notification" resultType="int">
+		select count(*)
+		from chat
+		where roomno =#{roomno} and name= #{name} and message_check2=
+		#{check}
+
+
+	</select>
+
+
+
+
+
+</mapper>

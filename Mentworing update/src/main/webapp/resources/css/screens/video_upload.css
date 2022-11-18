@@ -1,0 +1,186 @@
+.video_upload_title_container {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+	width: 100%;
+}
+
+.video_upload_title_wraper {
+	width: 80%;
+	height: auto;
+	margin-bottom: 120px;
+	margin-top: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.video_upload_title_title {
+	font-size: 48px;
+}
+
+.video_upload_title_subtitle {
+	margin-top: 20px;
+	font-size: 20px;
+	color: #6B7280;
+}
+
+.video_upload_main_container {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.video_upload_main_wraper {
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+	padding: 100px 100px;
+	padding-bottom: 100px;
+}
+
+.video_upload_main_imgbox {
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 160px;
+}
+
+.video_upload_main_imgbox img {
+	border: 2px solid;
+	width: 300px;
+	height: 400px;
+	position: relative;
+}
+
+.video_upload_information_box {
+	padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 220px;
+}
+
+.video_upload_information_input_box {
+	width: 550px;
+	height: auto;
+	margin-bottom: 30px;
+}
+
+.lecture_duty {
+	width: 550px;
+	height: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.09);
+	box-shadow: 0 1px 4px rgb(0 0 0/ 3%);
+	text-align: center;
+	outline: none;
+}
+
+.video_upload_information_input_title i {
+	margin-left: 5px;
+	color: #1dc078;
+}
+
+.video_upload_information_input_box input {
+	width: 550px;;
+	height: 44px;
+	border: 1px solid rgba(0, 0, 0, 0.09);
+	box-shadow: 0 1px 4px rgb(0 0 0/ 3%);
+	padding-left: 5px;
+}
+
+.video_upload_information_input_title {
+	margin-bottom: 5px;
+}
+
+.img_registration_btn {
+	position: absolute;
+	padding: 7px;
+	border: none;
+	margin-top: 480px;
+	width: 285px;
+}
+
+.mentor_registration_btn {
+	position: absolute;
+	margin-top: 300px;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: #1dc078;
+	width: 200px;
+	font-weight: 600;
+	color: #fff;
+}
+
+.mentor_registration_btn:hover {
+	cursor: pointer;
+	color: white;
+}
+
+#video_upload_big_box {
+	width: 550px;
+	height: 100px;
+	border: 1px solid rgba(0, 0, 0, 0.09);
+	box-shadow: 0 1px 4px rgb(0 0 0/ 3%);
+	padding-left: 5px;
+	padding-top: 10px;
+	resize: none;
+	outline: none;
+}
+
+#video {
+	width: 560px;
+    height: 415px;
+}
+
+#myProgress {
+	
+	position: absolute;
+    background-color: whitesmoke;
+    margin-top: 700px;
+    width: 500px;
+}
+
+#myBar {
+	width: 1%;
+	height: 30px;
+	background-color: #59cf92;
+}
+
+
+#videoUploadBox{
+	min-height: 90vh;
+}
+
+.videoUploadBtn{
+	position: absolute;
+    margin-top: 900px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1dc078;
+    width: 200px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.videoUploadBtn:hover{
+	cursor:pointer;
+	color:#1dc078;
+	background-color: #fff;
+	border:1px solid #1dc078;
+}
+
+.prograssBar input{
+	background: none;
+    position: absolute;
+    border: none;
+    color: black;
+    width: 30px;
+    margin: 6px 0px 0px 240px;
+}
+

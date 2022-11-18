@@ -1,0 +1,35 @@
+
+
+.icon_menu_bar_container{
+        width: 100%;
+    left: 0;
+    height: 200px;
+    background-color: #59cf92;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    bottom: 0;
+}
+
+.icon_menu_bar_wrap{
+    width: 90%;
+    height: 200px;
+    background-color: #59cf92;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.icon_menu i{
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+

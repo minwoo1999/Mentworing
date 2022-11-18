@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jang.a260.mapper.BasketMapper">
+
+
+
+
+	<insert id="insertbasket" keyProperty="bno">
+
+		<selectKey keyProperty="bno" resultType="int" order="BEFORE">
+
+			SELECT
+			COALESCE(MAX(bno),0)+1 AS bno FROM mentebasket
+		</selectKey>
+
+		INSERT INTO mentebasket
+		(bno,price,title,vno,userId,bfilename)
+		VALUES(
+		#{bno}, #{price}, #{title}, #{vno},
+		#{userId}, #{bfilename})
+
+
+	</insert>
+
+	<select id="getBasket" resultType="BasketVO">
+
+		select *
+		from mentebasket
+		where
+		userId =#{userId}
+
+	</select>
+
+	<delete id="deletebasket">
+
+		delete
+		from mentebasket
+		where bno =#{bno}
+
+	</delete>
+
+	<delete id="completeorder_deletebasket">
+
+		delete
+		from mentebasket
+		where userId =#{userId}
+
+	</delete>
+
+	<select id="basketCheck" resultType="String">
+
+		select *
+		from mentebasket
+		where
+		userId =#{userId} and vno=#{vno}
+
+	</select>
+
+	<select id="basketcounting" resultType="Int">
+
+		select count(*)
+		from mentebasket
+		where
+		userId =#{userId}
+
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>
