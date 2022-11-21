@@ -12,7 +12,7 @@
 #### 취업을 하려면 어느정도의 실력이 되야할까 ?
 #### 실무에서는 어떤 업무를 할까 ?
 
-### 그래서 개발하였습니다. ####MENTWORING
+
 
 
 ##### 시연영상
@@ -21,3 +21,16 @@
 https://infruntest.s3.ap-northeast-2.amazonaws.com/infrun.mp4
 
 
+## 프로젝트 기술 스택
+
+#### Back-end: java11,Spring boot,Mybatis3.2.2
+
+#### Front-End:html,css,javascript
+
+#### server:tomcat9.0,AWS EC2,Docker,ubuntu,Socket.io,AWS S3
+
+#### Collaboration:github,eclipse
+
+#### API: cool sms ,kg이니시스,naver mail
+
+#### DB:oracle
