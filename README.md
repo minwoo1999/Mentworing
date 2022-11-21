@@ -20,19 +20,31 @@
 ## 프로젝트 기술 스택
 * Back-end: java11,Spring boot,Mybatis3.2.2
 
-2.  Front-End:html,css,javascript
+*  Front-End:html,css,javascript
 
-3.  server:tomcat9.0,AWS EC2,Docker,ubuntu,Socket.io,AWS S3
+*  server:tomcat9.0,AWS EC2,Docker,ubuntu,Socket.io,AWS S3
 
-4.  Collaboration:github,eclipse
+*  Collaboration:github,eclipse
 
-5.  API: cool sms ,kg이니시스,naver mail
+*  API: cool sms ,kg이니시스,naver mail
 
-6.  DB:oracle
+*  DB:oracle
 
 ## 프로젝트에서 수행한 역할 및 깨달은 점
 
-#### 프로젝트 기획 DB설계  backend개발을 수행하였습니다.백엔드 개발자로서 API서버 개발 및 인프라 구축을 수행하였으며, [Socket.io] 1:1채팅구현 AWS S3 연결 및 Progress bar 구현 등등 여러가지 수행하였습니다.
+* 프로젝트 기획 DB설계  backend개발을 수행하였습니다.백엔드 개발자로서 API서버 개발 및 인프라 구축을 수행하였으며, [Socket.io] 1:1채팅구현 AWS S3 연결 및 Progress bar 구현 등등 여러가지 수행하였습니다.
+
+* 백엔드 API서버개발은 JAVA와 Spring을 기반으로 진행하였으며, Restful api를 개발하였습니다.
+
+또한 MVC구조로 Model View Controller Service 구현로직을 사용하여 개발을 진행하였습니다.
+
+* - 파일업로드 시 AWS S3 스토리지에 객체 URL형태로 저장이되며,
+
+대량의 파일을 업로드 시 불편함을 해소하고자, Progress bar을 구현하여 업로드 진행률을
+
+표시해주었습니다.
+
+* 클라이언트에서 원본 이미지, 비디오 및 파일들을 서버로 직접 올리기 때문에, 파일을 나누어 전송하는 Mutlipart 방식으로 파일 업로드를 구현하였으며, 이를 통해 서버에 한꺼번에 많은 트래픽이 가해지는 것을 방지하였습니다.
 
 
 
