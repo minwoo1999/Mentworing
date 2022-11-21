@@ -19,7 +19,7 @@
 
 ## 프로젝트 기술 스택
 
-1.  Back-end: java11,Spring boot,Mybatis3.2.2
+1. Back-end: java11,Spring boot,Mybatis3.2.2
 
 2.  Front-End:html,css,javascript
 
