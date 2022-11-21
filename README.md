@@ -19,17 +19,17 @@
 
 ## 프로젝트 기술 스택
 
-#### Back-end: java11,Spring boot,Mybatis3.2.2
+1.  Back-end: java11,Spring boot,Mybatis3.2.2
 
-#### Front-End:html,css,javascript
+2.  Front-End:html,css,javascript
 
-#### server:tomcat9.0,AWS EC2,Docker,ubuntu,Socket.io,AWS S3
+3.  server:tomcat9.0,AWS EC2,Docker,ubuntu,Socket.io,AWS S3
 
-#### Collaboration:github,eclipse
+4.  Collaboration:github,eclipse
 
-#### API: cool sms ,kg이니시스,naver mail
+5.  API: cool sms ,kg이니시스,naver mail
 
-#### DB:oracle
+6.  DB:oracle
 
 ## 프로젝트에서 수행한 역할 및 깨달은 점
 
