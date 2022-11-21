@@ -15,10 +15,6 @@
 
 
 
-##### 시연영상
-
-해당링크를 통해 확인하세요
-https://infruntest.s3.ap-northeast-2.amazonaws.com/infrun.mp4
 
 
 ## 프로젝트 기술 스택
@@ -34,3 +30,14 @@ https://infruntest.s3.ap-northeast-2.amazonaws.com/infrun.mp4
 #### API: cool sms ,kg이니시스,naver mail
 
 #### DB:oracle
+
+## 프로젝트에서 수행한 역할 및 깨달은 점
+
+#### 프로젝트 기획 DB설계  backend개발을 수행하였습니다.백엔드 개발자로서 API서버 개발 및 인프라 구축을 수행하였으며, [Socket.io] 1:1채팅구현 AWS S3 연결 및 Progress bar 구현 등등 여러가지 수행하였습니다.
+
+
+
+## 시연영상
+
+해당링크를 통해 확인하세요
+https://infruntest.s3.ap-northeast-2.amazonaws.com/infrun.mp4
