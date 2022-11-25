@@ -1,9 +1,9 @@
-# MENTWORING ㅁ
+# MENTWORING 
 
 ![image](https://user-images.githubusercontent.com/79193811/193780638-73ffea50-a24d-47a6-9b6b-ad1f08d38c35.png)
 
 ## 프로젝트 기간
-ㅁㄴ
+
 #### 2022-06 ~ 2021-11.
 
 ## 프로젝트 개요
