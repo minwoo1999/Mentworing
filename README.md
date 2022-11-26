@@ -56,5 +56,5 @@
 
 ## 시연영상
 
-해당링크를 통해 확인하세요
+해당링크를 통해 확인하세요.
 https://infruntest.s3.ap-northeast-2.amazonaws.com/infrun.mp4
